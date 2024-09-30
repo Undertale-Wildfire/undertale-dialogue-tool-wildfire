@@ -46,6 +46,7 @@
     {"id":{"name":"wrap_formatted_text","path":"scripts/wrap_formatted_text/wrap_formatted_text.yy",},},
     {"id":{"name":"spr_bnuuy","path":"sprites/spr_bnuuy/spr_bnuuy.yy",},},
     {"id":{"name":"spr_dialogue_bubble_corner","path":"sprites/spr_dialogue_bubble_corner/spr_dialogue_bubble_corner.yy",},},
+    {"id":{"name":"spr_journal","path":"sprites/spr_journal/spr_journal.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

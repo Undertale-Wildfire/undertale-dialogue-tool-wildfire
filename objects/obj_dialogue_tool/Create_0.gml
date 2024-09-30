@@ -7,6 +7,12 @@ text = "";
 buffer = undefined;
 overlay_alpha = 0;
 
+slide_dir = 0;
+slide_progress = 0;
+slide_offset = 0;
+
+ui_surface = undefined;
+
 horizontal_margin = 28;
 vertical_margin = 21;
 face_text_offset = 116;

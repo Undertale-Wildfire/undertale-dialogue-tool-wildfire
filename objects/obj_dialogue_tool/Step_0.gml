@@ -21,6 +21,21 @@ if (instance_exists(obj_cutscene)) {
 	exit;
 }
 
+if (slide_dir != 0) {
+	slide_progress += 0.05;
+	
+	slide_offset = power(1 - slide_progress, 3) * 640;
+	if (slide_dir == 1) {
+		slide_offset = 640 - slide_offset;
+	}
+	
+	if (slide_progress == 1) {
+		slide_dir = 0;
+	}
+	
+	exit;
+}
+
 if (keyboard_check_pressed(vk_enter)) {
 	keyboard_string += "\n";
 }
@@ -39,13 +54,15 @@ if (keyboard_check_pressed(vk_delete)) {
 	keyboard_string = "";
 }
 
-if (keyboard_check_pressed(vk_f1)) {
+var on_main_screen = (slide_offset == 0 && slide_dir == 0);
+
+if (keyboard_check_pressed(vk_f1) && on_main_screen) {
 	face = !face;
 }
 
 text = keyboard_string;
 
-if (keyboard_check_pressed(vk_f2)) {
+if (keyboard_check_pressed(vk_f2) && on_main_screen) {
 	var filename = get_open_filename(".wav files|*.wav", "");
 	
 	if (file_exists(filename)) {
@@ -107,4 +124,9 @@ if (keyboard_check_pressed(vk_f2)) {
 	} else {
 		keyboard_string = text;
 	}
+}
+
+if (keyboard_check_pressed(vk_f3) && slide_dir == 0) {
+	slide_dir = (slide_offset == 0 ? 1 : -1);
+	slide_progress = 0;
 }

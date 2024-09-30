@@ -83,6 +83,7 @@ function draw_formatted_text(_x, _y, font, char_spacing, line_spacing, text) {
 							case "f": draw_set_color(c_fuchsia); break;
 							case "p": draw_set_color(#ffbbd4); break;
 							case "gy": draw_set_color(c_gray); break;
+							case "dg": draw_set_color(#2d2d2d); break;  // Used for journal text
 						}
 						
 						break;
