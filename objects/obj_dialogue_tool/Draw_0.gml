@@ -60,7 +60,7 @@ if (slide_offset > 0) {
 draw_set_color(c_gray);
 draw_set_font(fnt_small);
 draw_set_halign(fa_center);
-draw_text(320, 458, "UNDERTALE DIALOGUE TOOL v1.03 (WILDFIRE) (C) PYTHON-B5 2024");
+draw_text(320, 458, "UNDERTALE DIALOGUE TOOL v1.04 (WILDFIRE) (C) PYTHON-B5 2024");
 draw_set_halign(fa_left);
 draw_set_color(c_white);
 
